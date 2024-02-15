@@ -53,7 +53,7 @@
         "conditions": [
           "#ACQ_word_size=='_32_BIT'",
           "#BYTORDA=='little'",
-          ["#ACQ_sw_version",["<PV-360.1.1>"]]
+          ["#ACQ_sw_version",["<PV-360.1.1>", "<PV-360.3.4>"]]
         ]
     }
   ],
@@ -62,6 +62,12 @@
       "cmd": "#ACQ_jobs.primed_dict(7)['<{}>'.format(@subtype)]",
       "conditions": [
         "#ACQ_sw_version in ['<PV-360.1.1>']"
+      ]
+    },
+    {
+      "cmd": "#ACQ_jobs.primed_dict(8)['<{}>'.format(@subtype)]",
+      "conditions": [
+        ["#ACQ_sw_version",["<PV-360.3.4>"]]
       ]
     },
     {
